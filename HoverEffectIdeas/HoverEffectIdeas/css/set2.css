@@ -1,0 +1,110 @@
+.grid {
+	width: 50%;
+	height: 80vh; 
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+}
+
+
+.grid figure figcaption {
+	color: #fff;
+	text-transform: uppercase;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+figure.effect-goliath:nth-child(1){
+	background: url(../../../images/main/c4_box1.png);
+	background-size: cover;
+	border: 1px solid red;
+	width: 100%;
+	height: 50%;
+	float: left;
+	overflow: hidden;
+}
+figure.effect-goliath:nth-child(2){
+	background: url(../../../images/main/c4_box2.png);
+	background-size: cover;
+	border: 1px solid blue;
+	width: 50%;
+	height: 50%;
+	float: left;
+	overflow: hidden;
+}
+figure.effect-goliath:nth-child(3){
+	background: url(../../../images/main/c4_box3.png);
+	background-size: cover;
+	border: 1px solid green;
+	width: 50%;
+	height: 50%;
+	float: left;
+	overflow: hidden;
+}
+
+figure.effect-goliath h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.effect-goliath h2,
+figure.effect-goliath p {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+}
+
+figure.effect-goliath p {
+	text-transform: none;
+	font-size: 18px;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(0,50px,0);
+	transform: translate3d(0,50px,0);
+}
+
+figure.effect-goliath:nth-child(2) p,
+figure.effect-goliath:nth-child(2) h2{
+	text-align: center; 
+	border: 1px solid yellow;
+	width: 100%;
+}
+
+
+figure.effect-goliath:hover h2 {
+	-webkit-transform: translate3d(0,-100px,0);
+	transform: translate3d(0,-100px,0);
+}
+
+figure.effect-goliath:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}

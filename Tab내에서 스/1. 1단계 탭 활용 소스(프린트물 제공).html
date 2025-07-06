@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>http://www.blueb.co.kr</title>
+<meta charset="UTF-8"/>
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<style>
+*{margin:0; padding:0; box-sizing:border-box;}
+ol,ul{list-style:none;}
+html,body,main{height:100%;}
+/*탭 메뉴 부분*/
+.innerTabs{width:100%;height:100%;border:0px solid blue;}
+.innerTabs ul.inner-tab{border:0px solid black;overflow:hidden;height:auto;text-align:center;}
+.innerTabs ul.inner-tab li{border:1px solid #000;float:left;width:20%;margin-left:-1px;}
+.innerTabs ul.inner-tab li a{border:0px solid red;width:100%;padding:20px 0;display:inline-block;background:#fff;color:#000;text-decoration:none;font-family:"맑은 고딕";}
+
+/*탭 클릭시 나오는 컨텐츠 영역*/
+.innerTabs .Tabs_content{border:5px solid black;width:100%;height:400px;padding-top:50px;clear:both;padding:50px;}
+</style>
+</head>
+<body>
+    <div class="innerTabs">
+		<ul class="inner-tab">
+			<li><a href="#" OnClick='premier(1);' id='premier_button1'>Tab 1</a></li>
+			<li><a href="#" OnClick='premier(2);' id='premier_button2'>Tab 2</a></li>
+			<li><a href="#" OnClick='premier(3);' id='premier_button3'>Tab 3</a></li>
+		</ul>
+	 
+		<div class="Tabs_content"><!-- ★★swiper-4.5.0을 끼어넣을때는 style='display:block;' 또는 style='display:none;' 을 제거해 주세요!!★★-->
+			<div id='premier1'>
+				asd
+			</div>
+			<div id='premier2'>
+				zxc
+			</div>
+			<div id='premier3'>
+				rty
+			</div>
+			<div id='premier4'>
+				fgh
+			</div>
+			<div id='premier5'>
+				qwe
+			</div>
+			<div id='premier6'>
+				
+			</div>
+		</div><!--//Tabs_content-->
+		
+	</div><!--//innerTabs-->
+
+	<script language>
+	premier(2); //처음에 활성화 시킬 탭 번호를 인수로 설정
+	function premier(n) {
+		for(var i = 1; i < 6; i++) {
+			obj = document.getElementById('premier'+i);
+			menu = document.getElementById('premier_button'+i);
+			if ( n == i ) {
+				obj.style.display = "block";
+				menu.style.background="red";
+				menu.style.color="#fff";
+			} else {
+				obj.style.display = "none";
+				menu.style.background="";
+				menu.style.color="";
+			}
+		}
+	}
+	</script>
+		
+		  
+</body>
+</html>		
