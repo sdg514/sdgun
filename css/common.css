@@ -94,7 +94,7 @@
 }
  
 /*header*/
-header{border:0px solid red; width:100%; height:auto; position:absolute; left:0; top:0; z-index:2;}
+header{border:0px solid red; width: 1920px; height:auto; position:absolute; left:0; top:0; z-index:2;}
 header div.outer{
 	border:0px solid blue;
 	width:87.5%;
