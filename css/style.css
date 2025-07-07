@@ -229,6 +229,10 @@ body{background-color: #282828;}
 	width: 100%;
 	height: auto;
 	margin: 0 auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 #content1 figure {
@@ -236,7 +240,6 @@ body{background-color: #282828;}
 	position: relative;
 	float: left;
 	overflow: hidden;
-	width: 33.3%;
 	height: 100%;
 	cursor: pointer;
 }
