@@ -17,6 +17,7 @@ body {
 }
 
 header{
+     position: relative;
      width: 100%;
      max-width: 1200px;
      margin: 0 auto;
@@ -71,11 +72,13 @@ header{
 
      header .menu-toggle{
           display: none;
+          position: absolute;
+          right: 20px;
+          background-color: var(--color-bg);
      }
 
      header .menuHide{
           display: none;
-          
      }
       
 
