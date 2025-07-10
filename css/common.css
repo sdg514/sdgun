@@ -40,7 +40,7 @@ header{
           justify-content: flex-end;
           align-items: center;
      }
-     header .navMenu ul{
+     header .navMenu > ul{
           display: flex;
           flex-direction: row;
           /* justify-content: space-around; */
@@ -73,7 +73,7 @@ header{
           display: none;
      }
 
-     .subMenu .menuHide{
+     header .menuHide{
           display: none;
           
      }
