@@ -1,524 +1,91 @@
 /*common:웹폰트/header/footer/body/a와 같이 모든 문서에 공통적으로 적용되어지는 부분*/
-/*웹폰트*/
 
-/*body,a,img,input 등*/
-
-/*EXO*/
-@font-face {
-  font-family: 'Exo-Medium';
-  src: url('../font/Exo-Medium/Exo-Medium.eot');
-  src: url('../font/Exo-Medium/Exo-Medium.eot?#iefix') format('embedded-opentype'),
-       url('../font/Exo-Medium/Exo-Medium.svg#Exo-Medium') format('svg'),
-       url('../font/Exo-Medium/Exo-Medium.ttf') format('truetype'),
-       url('../font/Exo-Medium/Exo-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+:root {
+  --color-bg: #0f0f0f;         /* 메인 배경 */
+  --color-text: #ffffff;       /* 일반 텍스트 */
+  --color-point: #00b2ff;      /* 로지텍스러운 포인트 컬러 */
+  --color-sub: #1a1a1a;        /* 섹션 구분 배경 */
+  --color-gray: #999999;       /* 보조 텍스트 */
 }
 
-@font-face {
-  font-family: 'Exo-Bold';
-  src: url('../font/Exo-Bold/Exo-Bold.eot');
-  src: url('../font/Exo-Bold/Exo-Bold.eot?#iefix') format('embedded-opentype'),
-       url('../font/Exo-Bold/Exo-Bold.svg#Exo-Bold') format('svg'),
-       url('../font/Exo-Bold/Exo-Bold.ttf') format('truetype'),
-       url('../font/Exo-Bold/Exo-Bold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+body {
+     font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+     font-size: 16px;
+     line-height: 1.6rem;
+     color: var(--color-text);
+     background: var(--color-bg);
 }
 
-@font-face {
-  font-family: 'Exo-ExtraBold';
-  src: url('../font/Exo-ExtraBold/Exo-ExtraBold.eot');
-  src: url('../font/Exo-ExtraBold/Exo-ExtraBold.eot?#iefix') format('embedded-opentype'),
-       url('../font/Exo-ExtraBold/Exo-ExtraBold.svg#Exo-ExtraBold') format('svg'),
-       url('../font/Exo-ExtraBold/Exo-ExtraBold.ttf') format('truetype'),
-       url('../font/Exo-ExtraBold/Exo-ExtraBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+header{
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 40px 20px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     border-bottom: rgb(255, 255, 255);
 }
 
-/*나눔 고딕*/
-
-@font-face {
-  font-family: 'NanumGothic';
-  src: url('../font/NanumGothic/NanumGothic.svg#NanumGothic') format('svg'),
-       url('../font/NanumGothic/NanumGothic.ttf') format('truetype'),
-       url('../font/NanumGothic/NanumGothic.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NanumGothicBold';
-  src: url('../font/NanumGothicBold/NanumGothicBold.svg#NanumGothicBold') format('svg'),
-       url('../font/NanumGothicBold/NanumGothicBold.ttf') format('truetype'),
-       url('../font/NanumGothicBold/NanumGothicBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'NanumGothicExtraBold';
-  src: url('../font/NanumGothicExtraBold/NanumGothicExtraBold.svg#NanumGothicExtraBold') format('svg'),
-       url('../font/NanumGothicExtraBold/NanumGothicExtraBold.ttf') format('truetype'),
-       url('../font/NanumGothicExtraBold/NanumGothicExtraBold.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-/*Noto Sans KR regular*/
-
-@font-face {
-    font-family: 'notokr-regular';
-    src: url('../font/NotoKR-Regular/notokr-regular.eot');
-    src: url('../font/NotoKR-Regular/notokr-regular.eot?#iefix') format('embedded-opentype'),
-         url('../font/NotoKR-Regular/notokr-regular.woff2') format('woff2'),
-         url('../font/NotoKR-Regular/notokr-regular.woff') format('woff'),
-         url('../font/NotoKR-Regular/notokr-regular.ttf') format('truetype'),
-         url('../font/NotoKR-Regular/notokr-regular.svg#notokr-regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'notokr-bold';
-    src: url('../font/NotoKR-Bold/notokr-bold.eot');
-    src: url('../font/NotoKR-Bold/notokr-bold.eot?#iefix') format('embedded-opentype'),
-         url('../font/NotoKR-Bold/notokr-bold.woff2') format('woff2'),
-         url('../font/NotoKR-Bold/notokr-bold.woff') format('woff'),
-         url('../font/NotoKR-Bold/notokr-bold.ttf') format('truetype'),
-         url('../font/NotoKR-Bold/notokr-bold.svg#notokr-bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
- 
-/*header*/
-header{border:0px solid red; width: 1920px; height:auto; position:absolute; left:0; top:0; z-index:2;}
-header div.outer{
-	border:0px solid blue;
-	width:87.5%;
-	height:100%;
-	margin:0 auto;
-}
-header div.outer h1.pc{border:0px solid pink; padding:25px 0; display:inline-block;}
-header div.outer #infoMenu{border:0px solid green; float:right; width:242px; padding:35px 0;}
-header div.outer #infoMenu ul#info{border:0px solid blue; display:inline-block;}
-header div.outer #infoMenu ul#info #bt{border:0px solid red; padding-right:26px;}
-header div.outer #infoMenu ul#info li.shop{border:0px solid red; display:inline-block; padding-right:27px;}
-header div.outer #infoMenu ul#info li.user{border:0px solid red; display:inline-block;}
-header div.outer #infoMenu #qnb{border:0px solid blue; float:right;}
-header div.outer #infoMenu #qnb .sidenav {
-     /* border:1px solid green; */
-     height: 100%;
-     width: 0;
-     position: fixed;
-     z-index: 1;
-     top: 0;
-     right: 0;
-     background-color:rgba(0, 0, 0, 0.9);
-     overflow-x: hidden;
-     transition: 0.5s;
-     padding-top: 5%;
-}
-
-header div.outer #infoMenu #qnb .sidenav a {
-     /* border:1px solid blue; */
-     /* padding: 8px 8px 8px 32px; */
-     text-decoration: none;
-     font-family: 'NanumGothicBold';
-     /* font-size: 50px; */
-     font-size: 2.6vw;
-     color: #818181;
-     display: block;
-     transition: 0.3s;
-     text-align: center;
-     /* margin-top: 60px; */
-     margin-top: 6vh;
-}
-     
-header div.outer #infoMenu #qnb .sidenav a:hover {
-     color: #f1f1f1;
-}
-     
-header div.outer #infoMenu #qnb .sidenav a.closebtn {
-     /* border:1px solid red; */
-     position: absolute;
-     /* top: -60px; */
-     top: -5vh;
-     /* right: 120px; */
-     right: 6.25vw;
-     /* font-size: 60px; */
-     font-size: 3.13vw;
-}
-
-header div.outer #infoMenu #qnb .sidenav .menu a {
-     cursor:pointer;
-}
-header div.outer #infoMenu #qnb .sidenav .menu .hide {
-     display:none;
-}
-header div.outer #infoMenu #qnb .sidenav .menu .hide a{
-     /* border: 5px solid red; */
-     font-family: 'NanumGothic';
-     /* font-size: 28px; */
-     font-size: 1.46vw;
-     /* margin-top: 20px; */
-     margin-top: 3vh;
-}
-
-/*footer*/
-
-footer{border: 0px solid pink; width: 100%; height: auto; background-color: #d3d3d3;}
-footer div.outer{border: 0px solid red; margin: 0 auto; width: 87.5%; height: 100%;}
-footer div.outer div.inner{border: 0px solid green; width: 89%; height: 100%; margin: 0 auto;
-padding: 37px 0; position: relative;}
-
-footer div.outer div.inner ul.b_menu{border: 0px solid yellow; margin-bottom:29px;}
-footer div.outer div.inner ul.b_menu li{border: 0px solid blue; display: inline; background: url(../images/common/b_menu_line.gif) no-repeat 0 3px; padding: 0 20px;}
-footer div.outer div.inner ul.b_menu li a{
-     border: 0px solid magenta;
-     font-family: 'NanumGothicBold';
-     font-size: 14px;
-     color: #616161;
-     
-}
-footer div.outer div.inner ul.b_menu li:first-child{padding-left:0; background:none;}
-footer div.outer div.inner ul.b_menu li:last-child{padding-right:0;}
-footer div.outer div.inner address{
-     border: 0px solid yellow;
-     font-family: 'NanumGothic';
-     font-size: 12px;
-     color: #979797;
-}
-
-footer div.outer div.inner form{
-     border: 0px solid black;
-     position: absolute;
-     right: 0;
-     top: 31px;
-}
-footer div.outer div.inner form input#text{
-     border: 1px solid #858585;
-     background-color: #ffffff;
-     width: 250px;
-     height: 29px;
-     margin-right: 10px;
-     text-indent: 5px;
-	vertical-align:bottom;
-}
-footer div.outer div.inner form input#bt{
-     font-family: 'NanumGothic';
-     font-size: 12px;
-     color: #000000;
-     padding: 6px 0;
-     width: 94px;
-	height: 29px;
-     border: 1px solid #858585;
-     background-color: #ffffff;
-	 vertical-align:bottom;
-}
-footer div.outer div.inner ul.sns{
-     border: 0px solid red;
-	 overflow:hidden;
-	 position:absolute;
-	 right:0;
-	 bottom: 37px;
-}
-footer div.outer div.inner ul.sns li{float:left; border: 0px solid blue; margin: 0 15px;}
-
-footer div.outer div.inner ul.sns li:first-child{margin-left: 0;}
-footer div.outer div.inner ul.sns li:last-child{margin-right: 0;}
-
-/* 태블릿 */
-@media all and (min-width:600px) and (max-width:1279px){
-
-     /*header*/
-     header{border:0px solid red; width:100%; height:auto; position:absolute; left:0; top:0; z-index:2;}
-     header div.outer{
-          border:0px solid blue;
-          width:91%;
-          height:100%;
-          margin:0 auto;
-     }
-     header div.outer h1.pc{border:0px solid pink; padding-top:25px; display:inline-block;}
-     header div.outer #infoMenu{border:0px solid green; float:right; width:242px; padding-top:35px;}
-     header div.outer #infoMenu ul#info{border:0px solid blue; display:inline-block;}
-     header div.outer #infoMenu ul#info #bt{border:0px solid red; padding-right:26px;}
-     header div.outer #infoMenu ul#info li.shop{border:0px solid red; display:inline-block; padding-right:27px;}
-     header div.outer #infoMenu ul#info li.user{border:0px solid red; display:inline-block;}
-     header div.outer #infoMenu #qnb{border:0px solid blue; float:right;}
-     header div.outer #infoMenu #qnb .sidenav {
-          /* border:1px solid green; */
-          height: 100%;
-          width: 0;
-          position: fixed;
-          z-index: 1;
-          top: 0;
-          right: 0;
-          background-color:rgba(0, 0, 0, 0.9);
-          overflow-x: hidden;
-          transition: 0.5s;
-          padding-top: 5%;
-     }
-     
-     header div.outer #infoMenu #qnb .sidenav a {
-          /* border:1px solid blue; */
-          /* padding: 8px 8px 8px 32px; */
-          text-decoration: none;
-          font-family: 'NanumGothicBold';
-          /* font-size: 50px; */
-          font-size: 4vw;
-          color: #818181;
-          display: block;
-          transition: 0.3s;
-          text-align: center;
-          /* margin-top: 60px; */
-          margin-top: 6vh;
-     }
-          
-     header div.outer #infoMenu #qnb .sidenav a:hover {
-          color: #f1f1f1;
-     }
-          
-     header div.outer #infoMenu #qnb .sidenav a.closebtn {
-          /* border:1px solid red; */
-          position: absolute;
-          /* top: -60px; */
-          top: -5vh;
-          /* right: 120px; */
-          right: 5.25vw;
-          font-size: 60px;
-          /* font-size: 7.81vw; */
-     }
-     
-     header div.outer #infoMenu #qnb .sidenav .menu a {
-          cursor:pointer;
-     }
-     header div.outer #infoMenu #qnb .sidenav .menu .hide {
-          display:none;
-     }
-     header div.outer #infoMenu #qnb .sidenav .menu .hide a{
-          /* border: 5px solid red; */
-          font-family: 'NanumGothic';
-          /* font-size: 28px; */
-          font-size: 2.63vw;
-          /* margin-top: 20px; */
-          margin-top: 3vh;
-     }
-     
-
-
-     /*footer*/
-
-     footer{border: 0px solid pink; width: 100%; height: auto; background-color: #d3d3d3;}
-     footer div.outer{border: 0px solid red; margin: 0 auto; width: 100%; height: 100%;}
-     footer div.outer div.inner{border: 0px solid green; width: 91%; height: 100%; margin: 0 auto;
-     padding: 37px 0; position: relative;}
-
-     footer div.outer div.inner ul.b_menu{border: 0px solid yellow; margin-bottom:29px;}
-     footer div.outer div.inner ul.b_menu li{border: 0px solid blue; display: inline; background: url(../images/common/b_menu_line.gif) no-repeat 0 3px; padding: 0 20px;}
-     footer div.outer div.inner ul.b_menu li a{
-          border: 0px solid magenta;
-          font-family: 'NanumGothicBold';
-          /* font-size: 14px; */
-          font-size: 1.75vw;
-          color: #616161;
-          
-     }
-     footer div.outer div.inner ul.b_menu li:first-child{padding-left:0; background:none;}
-     footer div.outer div.inner ul.b_menu li:last-child{padding-right:0;}
-     footer div.outer div.inner address{
-          border: 0px solid yellow;
-          font-family: 'NanumGothic';
-          /* font-size: 12px; */
-          font-size: 1.5vw;
-          color: #979797;
-          letter-spacing: -0.02em;
+     header h1{
+          background: url(../images/common/logo.png) no-repeat;
+          width: 176px; height: 44px;
+          font-size: 0px;
      }
 
-     footer div.outer div.inner form{
-          border: 0px solid black;
-          position: absolute;
-          right: 0;
-          top: 31px;
+     header .navMenu{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          align-items: center;
      }
-     footer div.outer div.inner form input#text{
-          border: 1px solid #858585;
-          background-color: #ffffff;
-          /* width: 250px; */
-          width: 31.25vw;
-          height: 29px;
-          margin-right: 10px;
-          text-indent: 5px;
-          vertical-align:bottom;
+     header .navMenu ul{
+          display: flex;
+          flex-direction: row;
+          /* justify-content: space-around; */
+          gap: 40px;
+          font-size: 20px;
+          font-weight: bold;
      }
-     footer div.outer div.inner form input#bt{
-          font-family: 'NanumGothic';
-          /* font-size: 12px; */
-          font-size: 1.5vw;
-          color: #000000;
-          padding: 6px 0;
-          /* width: 94px; */
-          width: 11.75vw;
-          height: 29px;
-          border: 1px solid #858585;
-          background-color: #ffffff;
-          vertical-align:bottom;
-     }
-     footer div.outer div.inner ul.sns{
-          border: 0px solid red;
-          overflow:hidden;
-          position:absolute;
-          right:0;
-          bottom: 37px;
-     }
-     footer div.outer div.inner ul.sns li{float:left; border: 0px solid blue; margin: 0 1.6vw;}
-
-     footer div.outer div.inner ul.sns li:first-child{margin-left: 0;}
-     footer div.outer div.inner ul.sns li:last-child{margin-right: 0;}
-} /* 태블릿 종료 */
-
-     /* 모바일 */
-     @media all and (max-width:599px){
-          header{border:0px solid red; width:100%; height:auto; position:absolute; left:0; top:0; z-index:2;}
-          header div.outer{
-               border:0px solid blue;
-               width:92%;
-               height:100%;
-               margin:0 auto;
+          .navMenu ul li {
+               position: relative;
+               cursor: pointer;
           }
-          header div.outer h1.pc{border:0px solid pink; /*padding-top:32px;*/ padding-top: 2.7vh; display:inline-block; width: 160px;}
-          header div.outer #infoMenu{border:0px solid green; float:right; width:auto; /*padding-top:35px;*/ padding-top: 3.5vh;}
-          header div.outer #infoMenu ul#info{border:0px solid blue; display:none;}
-          header div.outer #infoMenu ul#info #bt{border:0px solid red; padding-right:26px;}
-          header div.outer #infoMenu ul#info li.shop{border:0px solid red; display:inline-block; padding-right:27px;}
-          header div.outer #infoMenu ul#info li.user{border:0px solid red; display:inline-block;}
-          header div.outer #infoMenu #qnb{border: 0px solid blue; float:right;}
-          header div.outer #infoMenu #qnb .sidenav {
-               /* border:1px solid green; */
-               height: 100%;
-               width: 0;
-               position: fixed;
-               z-index: 1;
-               top: 0;
-               right: 0;
-               background-color:rgba(0, 0, 0, 0.9);
-               overflow-x: hidden;
-               transition: 0.5s;
-               padding-top: 5%;
+          .navMenu ul li:hover {
+               color: var(--color-point); /* #00b2ff */
           }
-          
-          header div.outer #infoMenu #qnb .sidenav a {
-               /* border:1px solid blue; */
-               /* padding: 8px 8px 8px 32px; */
-               text-decoration: none;
-               font-family: 'NanumGothicBold';
-               /* font-size: 50px; */
-               font-size: 5vw;
-               color: #818181;
-               display: block;
-               transition: 0.3s;
-               text-align: center;
-               /* margin-top: 60px; */
-               margin-top: 6vh;
-          }
-               
-          header div.outer #infoMenu #qnb .sidenav a:hover {
-               color: #f1f1f1;
-          }
-               
-          header div.outer #infoMenu #qnb .sidenav a.closebtn {
-               /* border:1px solid red; */
+          .navMenu ul li::after {
+               content: '';
                position: absolute;
-               /* top: -60px; */
-               top: -5.5vh;
-               /* right: 120px; */
-               right: 4.85vw;
-               /* font-size: 50px; */
-               font-size: 13.33vw;
-          }
-          
-          header div.outer #infoMenu #qnb .sidenav .menu a {
-               cursor:pointer;
-          }
-          header div.outer #infoMenu #qnb .sidenav .menu .hide {
-               display:none;
-          }
-          header div.outer #infoMenu #qnb .sidenav .menu .hide a{
-               /* border: 5px solid red; */
-               font-family: 'NanumGothic';
-               /* font-size: 28px; */
-               font-size: 3vw;
-               /* margin-top: 20px; */
-               margin-top: 3vh;
-          }
-          
-
-          /*footer*/
-
-          footer{border: 0px solid pink; width: 100%; height: auto; background-color: #d3d3d3;}
-          footer div.outer{border: 0px solid red; margin: 0 auto; width: 100%; height: 100%;}
-          footer div.outer div.inner{border: 0px solid green; width: 91%; height: 100%; margin: 0 auto;
-          padding: 37px 0; position: relative;}
-
-          footer div.outer div.inner ul.b_menu{border: 0px solid yellow; margin-bottom:20px; margin-top: 50px;}
-          footer div.outer div.inner ul.b_menu li{border: 0px solid blue; display: inline; background: url(../images/common/b_menu_line.gif) no-repeat 0 3px; padding: 0 20px;}
-          footer div.outer div.inner ul.b_menu li a{
-               border: 0px solid magenta;
-               font-family: 'NanumGothicBold';
-               font-size: 12px;
-               color: #616161;
-               letter-spacing: -0.05em;
-          }
-          footer div.outer div.inner ul.b_menu li:first-child{padding-left:0; background:none;}
-          footer div.outer div.inner ul.b_menu li:last-child{padding-right:0;}
-          footer div.outer div.inner address{
-               border: 0px solid yellow;
-               font-family: 'NanumGothic';
-               font-size: 10px;
-               color: #979797;
-               margin-top: 0;
-               letter-spacing: -0.05em;
-          }
-
-          footer div.outer div.inner form{
-               border: 0px solid black;
-               position: absolute;
-               right: 0;
-               top: 31px;
-          }
-          footer div.outer div.inner form input#text{
-               border: 1px solid #858585;
-               background-color: #ffffff;
-               /* width: 135px; */
-               width: 28vw;
-               height: 20px;
-               margin-right: 10px;
-               text-indent: 5px;
-               vertical-align:bottom;
-          }
-          footer div.outer div.inner form input#bt{
-               font-family: 'NanumGothic';
-               font-size: 10px;
-               color: #000000;
-               padding: 6px 0;
-               width: 60px;
-               height: 20px;
-               border: 1px solid #858585;
-               background-color: #ffffff;
-               vertical-align:bottom;
-          }
-          footer div.outer div.inner ul.sns{
-               border: 0px solid red;
-               overflow:hidden;
-               position:absolute;
                left: 0;
-               top: 31px;
+               bottom: -4px;
+               width: 0%;
+               height: 2px;
+               background: var(--color-point);
+               transition: width 0.3s ease;
           }
-          footer div.outer div.inner ul.sns li{float:left; border: 0px solid blue; margin: 0 10px;}
-          footer div.outer div.inner ul.sns li img{width: 25px;}
+          .navMenu ul li:hover::after {
+               width: 100%;
+          }
 
-          footer div.outer div.inner ul.sns li:first-child{margin-left: 0;}
-          footer div.outer div.inner ul.sns li:last-child{margin-right: 0;}
-     }/* 모바일 종료 */
+     header .menu-toggle{
+          display: none;
+     }
+
+     .subMenu .menuHide{
+          display: none;
+          
+     }
+      
+
+.container {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 20px;
+}
+
+.section {
+     padding: 100px 0;
+}
