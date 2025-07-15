@@ -1,7 +1,7 @@
 /*common:웹폰트/header/footer/body/a와 같이 모든 문서에 공통적으로 적용되어지는 부분*/
 
 :root {
-  --color-bg: #0f0f0f;         /* 메인 배경 */
+  --color-bg: #000000;         /* 메인 배경 */
   --color-text: #ffffff;       /* 일반 텍스트 */
   --color-point: #00b2ff;      /* 로지텍스러운 포인트 컬러 */
   --color-sub: #1a1a1a;        /* 섹션 구분 배경 */
@@ -16,32 +16,36 @@ body {
      background: var(--color-bg);
 }
 
-header{
+#header{
      position: relative;
      width: 100%;
      max-width: 1200px;
      margin: 0 auto;
-     padding: 40px 20px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     align-items: center;
-     border-bottom: rgb(255, 255, 255);
+     padding: 0 20px;
+     
 }
 
-     header h1{
+     #header .headerInner{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          padding: 40px 0;
+     }
+     #header h1{
           background: url(../images/common/logo.png) no-repeat;
           width: 176px; height: 44px;
           font-size: 0px;
+          z-index: 9999;
      }
 
-     header .navMenu{
+     #header .navMenu{
           display: flex;
           flex-direction: row;
           justify-content: flex-end;
           align-items: center;
      }
-     header .navMenu > ul{
+     #header .navMenu > ul{
           display: flex;
           flex-direction: row;
           /* justify-content: space-around; */
@@ -69,20 +73,66 @@ header{
           .navMenu ul li:hover::after {
                width: 100%;
           }
-
-     header .menu-toggle{
-          display: none;
-          position: absolute;
-          right: 20px;
-          background-color: var(--color-bg);
+     /* header .subMenu{
+          background-color: #bdbdbd;
+          background: rgba(185, 185, 185, 0.8);
+     } */
+     header .subMenu{
+          position: relative;
+          width: 100%;
      }
+          header .menuHide{
+               position: absolute;
+               top: 0px; right: 0px;
+               width: 100%;
+               background: rgba(185, 185, 185, 0.8);
+               display: flex;
+               justify-content: space-around;
+               justify-items: center;
+               align-items: center;
+               flex-flow: row wrap;
+               gap: 1rem;
+               max-height: 0;
+               overflow: hidden;
+               transition: max-height 0.5s ease;
+          }
+          .menuHide.show {
+               max-height: 500px; /* 내용 많으면 더 크게 */
+          }
+               header .menuHide > li{
+                    width: 160px;
+                    height: 160px;
+                    background-color: aqua;
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px 0;
+               }
+               header .menuHide > li > a{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+               }
 
-     header .menuHide{
-          display: none;
-     }
-      
-
-.container {
+                    header .menuHide > li > a:hover img{
+                         transform: scale(1.2);
+                         transition: all 0.3s;
+                    }
+               header .menuHide > li img{
+                    width: 150px;
+               }
+          
+          /* #menuHide1{
+               border: 1px solid #fff;
+          }
+          #menuHide2{
+               border: 1px solid rgb(56, 156, 115);
+          }
+          #menuHide3{
+               border: 1px solid pink;
+          } */
+#container {
      width: 100%;
      max-width: 1200px;
      margin: 0 auto;
